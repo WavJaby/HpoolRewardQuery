@@ -13,7 +13,7 @@ Only for chia
 3. press F12 to open DevTool
 4. go to Application tab to get auth_token
 
-![](https://media.discordapp.net/attachments/832577590924935198/856091977766535168/unknown.png)
+![image](https://media.discordapp.net/attachments/832577590924935198/856091977766535168/unknown.png)
 
 5. Go to the folder of `HpoolRewardQuery.jar` and runcommand: `java -jar HpoolRewardQuery.jar --token AUTH_TOKEN_YOU_GET`
 
@@ -24,6 +24,8 @@ Only for chia
 * `-e` `--end` end time(not done yet)
 * `-t` `--today` reward today(not done yet)
 
+# Image
+![image](https://user-images.githubusercontent.com/51706075/122774106-84a4dd80-d2db-11eb-9f85-feb72fd6cefc.png)
 </br>
 </br>
 

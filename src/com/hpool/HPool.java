@@ -41,7 +41,7 @@ public class HPool {
                 case "--ALL":
                     all = true;
                     break;
-                case "t":
+                case "-t":
                 case "--today":
                     today = true;
                     break;
@@ -80,7 +80,7 @@ public class HPool {
         int numberInPage;
         System.out.print("\rget page 0/*");
         do {
-            String result = getDataFromUrl("https://www.hpool.com/api/pool/miningdetail?language=zh&type=chia&count=100&page=" + (pageCount++), true);
+            String result = getDataFromUrl("https://www.hpool.co/api/pool/miningdetail?language=zh&type=chia&count=100&page=" + (pageCount++), true);
             if (result == null)
                 return null;
 
@@ -156,7 +156,7 @@ public class HPool {
         int numberInPage = 100;
         System.out.print("\rget page 0/*");
         do {
-            String result = getDataFromUrl("https://www.hpool.com/api/pool/miningincomerecord?language=en&type=chia&count=" + numberInPage + "&page=" + (pageCount++), true);
+            String result = getDataFromUrl("https://www.hpool.co/api/pool/miningdetail?language=zh&type=chia&count=" + numberInPage + "&page=" + (pageCount++), true);
             if (result == null)
                 return;
 
@@ -249,7 +249,7 @@ public class HPool {
     }
 
     private String getHpoolCoinInfo() {
-        String out = getDataFromUrl("https://www.hpool.com/api/home/list?language=zh&type=eco", false);
+        String out = getDataFromUrl("https://www.hpool.co/api/home/list?language=zh&type=eco", false);
         if (out == null)
             return "";
 
@@ -297,7 +297,7 @@ public class HPool {
         int numberInPage = 100;
         System.out.print("\rget page 0/*");
         do {
-            String result = getDataFromUrl("https://www.hpool.com/api/pool/GetPlots?language=zh&status=ALL&pool=chia&count=100&page=" + pageCount++, true);
+            String result = getDataFromUrl("https://www.hpool.co/api/pool/GetPlots?language=zh&status=ALL&pool=chia&count=100&page=" + pageCount++, true);
             if (result == null)
                 break;
 
@@ -360,6 +360,7 @@ public class HPool {
             connection.setRequestMethod("GET");
             if (isCookie)
                 connection.setRequestProperty("Cookie", cookie);
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0");
 
             //read result
             StringBuilder result = new StringBuilder();

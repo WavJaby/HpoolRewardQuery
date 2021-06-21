@@ -156,7 +156,7 @@ public class HPool {
         int numberInPage = 100;
         System.out.print("\rget page 0/*");
         do {
-            String result = getDataFromUrl("https://www.hpool.co/api/pool/miningdetail?language=zh&type=chia&count=" + numberInPage + "&page=" + (pageCount++), true);
+            String result = getDataFromUrl("https://www.hpool.co/api/pool/miningincomerecord?language=zh&type=chia&count=" + numberInPage + "&page=" + (pageCount++), true);
             if (result == null)
                 return;
 
